@@ -16,10 +16,9 @@ WORKDIR workdir/deck
 
 RUN rm -rf .git
 
+RUN npm install
 
 WORKDIR ../deck-bmc
-
-RUN ls -l
 
 RUN ./build.sh
 
