@@ -14,6 +14,8 @@ USER node
 
 WORKDIR workdir/deck
 
+RUN pwd
+
 RUN rm -rf .git
 
 #RUN npm install
@@ -21,6 +23,10 @@ RUN rm -rf .git
 #CMD npm start
 
 WORKDIR ../deck-bmc
+
+RUN pwd
+
+RUN ls -l
 
 RUN build.sh
 
