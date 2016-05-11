@@ -20,6 +20,7 @@ Use the build.sh script in the deck-bmc repository to build the combined project
 For e.g., 
 
 > ~/GitHub/BMCSoftwareCTO/deck-bmc
+>
 > ~/GitHub/BMCSoftwareCTO/deck
 
 If they are not at the same level, then set the DECK_HOME environment variable to point to the public deck folder.
@@ -29,11 +30,16 @@ Run the build.sh script from the deck-bmc
 ### What does build.sh script do?
 
 The build.sh script in the deck-bmc does the follwoing
+
 1. If DECK_HOME is not set, then sets DECK_HOME
+
 2. Copies the app/scripts/modules/bmc to $DECK_HOME/app/scripts/modules/bmc
-2. Updates deck's git to ignore the newly copied bmc files so that git commit from the main deck folder won't try to include those files.
-3. Includes the bmc module in the main deck's app
-4. Calls npm run build from $DECK_HOME
+
+3. Updates deck's git to ignore the newly copied bmc files so that git commit from the main deck folder won't try to include those files.
+
+4. Includes the bmc module in the main deck's app
+
+5. Calls npm run build from $DECK_HOME
 
 
 
